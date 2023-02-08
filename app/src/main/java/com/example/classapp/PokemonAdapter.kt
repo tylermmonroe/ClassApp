@@ -19,11 +19,15 @@ class PokemonAdapter(private val pokemon_list: List<Pokemon>) : RecyclerView.Ada
 
     override fun onBindViewHolder(holder: PokemonViewHolder, position: Int) {
         val pokemon_item = pokemon_list[position]
+        val name = pokemon_item.name
+        val id = pokemon_item.id.toString()
+        val generation = pokemon_item.generation
         holder.pokemonImage.setImageResource(pokemon_item.image)
-        holder.pokemonName.text = "Name: " + pokemon_item.name
-        holder.pokemonId.text = "ID: " + pokemon_item.id.toString()
-        holder.pokemonGeneration.text = "Generation: " + pokemon_item.generation
+        holder.pokemonName.text = "Name: $name"
+        holder.pokemonId.text = "ID: $id"
+        holder.pokemonGeneration.text = "Generation: $generation"
         holder.pokemonType.setImageResource(pokemon_item.type)
+        //alt_type is set to -1 if pokemon does not have a 2nd type
         if (pokemon_item.alt_type != -1) {
             holder.pokemonTypeAlt.setImageResource(pokemon_item.alt_type)
         }
