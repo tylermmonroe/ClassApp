@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.PokemonDetailFragment">
+
+    <ImageView
+        android:id="@+id/pokemon_image"
+        android:layout_width="256dp"
+        android:layout_height="256dp"
+        tools:src="@drawable/bulbasaur"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="32dp"
+        />
+    <TextView
+        android:id="@+id/pokemon_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="Bulbasaur"
+        android:textSize="32sp"
+        app:layout_constraintTop_toBottomOf="@id/pokemon_image"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        />
+    <TextView
+        android:id="@+id/pokemon_category"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="Seed Pokemon"
+        android:textSize="18sp"
+        app:layout_constraintTop_toBottomOf="@id/pokemon_name"
+        app:layout_constraintStart_toStartOf="@id/pokemon_name"
+        app:layout_constraintEnd_toEndOf="@id/pokemon_name"
+        />
+    <ImageView
+        android:id="@+id/pokemon_type"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:src="@drawable/grass_ic"
+        app:layout_constraintEnd_toStartOf="@id/pokemon_type_alt"
+        app:layout_constraintTop_toBottomOf="@id/pokemon_category"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        android:layout_marginEnd="8dp"
+        android:layout_marginTop="4dp"
+
+        />
+    <ImageView
+        android:id="@+id/pokemon_type_alt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:src="@drawable/poison_ic"
+        app:layout_constraintStart_toEndOf="@id/pokemon_type"
+        app:layout_constraintTop_toTopOf="@id/pokemon_type"
+        app:layout_constraintEnd_toEndOf="parent"
+        />
+    <TextView
+        android:id="@+id/pokemon_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="ID: #1"
+        android:textSize="16sp"
+        app:layout_constraintTop_toBottomOf="@id/pokemon_type"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="8dp"
+        />
+    <TextView
+        android:id="@+id/pokemon_generation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="Generation: I"
+        android:textSize="16sp"
+        app:layout_constraintTop_toBottomOf="@id/pokemon_id"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        />
+    <TextView
+        android:id="@+id/pokemon_ability"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="Ability: Overgrow"
+        android:textSize="16sp"
+        app:layout_constraintTop_toBottomOf="@id/pokemon_generation"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        />
+    <TextView
+        android:id="@+id/pokemon_height"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        tools:text="Height: 0.7m"
+        app:layout_constraintTop_toBottomOf="@id/pokemon_ability"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        />
+    <TextView
+        android:id="@+id/pokemon_weight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        tools:text="Weight: 6.9kg"
+        app:layout_constraintTop_toBottomOf="@id/pokemon_height"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        />
+    <TextView
+        android:id="@+id/pokemon_pokedex_entry"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        tools:text="A strange seed was planted on its back at birth. The plant sprouts and grows with this Pokemon."
+        app:layout_constraintTop_toBottomOf="@id/pokemon_weight"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:paddingStart="32dp"
+        android:paddingEnd="32dp"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
